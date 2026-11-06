@@ -13,19 +13,10 @@ public class WordCounterTest extends BaseTest {
 
         page.openPage();
         page.writeText("hola mundo");
-        System.out.println(
-                "TEXTAREA = " +
-                        page.getTextAreaContent()
-        );
+        System.out.println("TEXTAREA = " + page.getTextAreaContent());
 
-        System.out.println(
-                "COUNTER = " +
-                        page.getCounterText()
-        );
-        Assertions.assertEquals(
-                2,
-                page.getWordCount()
-        );
+        System.out.println("COUNTER = " + page.getCounterText());
+        Assertions.assertEquals(2, page.getWordCount());
     }
 
     @Test
@@ -48,10 +39,10 @@ public class WordCounterTest extends BaseTest {
         WordCounterPage page = new WordCounterPage(driver);
         page.openPage();
         page.writeText("java java java selenium selenium test");
-        Assertions.assertEquals("java", page.getKeyword(1)
-        );
 
-        Assertions.assertEquals(3,page.getKeywordCount(1));
+        Assertions.assertEquals("java", page.getKeyword(1));
+
+        Assertions.assertEquals(3, page.getKeywordCount(1));
 
         Assertions.assertEquals("selenium", page.getKeyword(2));
 

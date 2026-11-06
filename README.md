@@ -67,3 +67,23 @@ JUnit 5
 Maven
 Page Object Model (POM)
 Se eligió el patrón Page Object Model para separar la lógica de interacción con la aplicación de la lógica de las pruebas, facilitando el mantenimiento y la escalabilidad de la suite.
+
+
+Reportes de ejecución
+La ejecución genera automáticamente reportes JUnit/Surefire en:
+
+target/surefire-reports
+
+Estos reportes incluyen:
+
+Cantidad de escenarios ejecutados
+Cantidad de escenarios exitosos
+Cantidad de escenarios fallidos
+Detalle de errores y stacktrace
+Para generar el sitio HTML de Maven:
+
+mvn clean test site
+
+Luego abrir:
+
+target/site/index.html
